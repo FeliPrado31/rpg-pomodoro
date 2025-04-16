@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pomodoro RPG</h1>
+        </header>
+
+        <main>
+            <!-- Timer Display Section -->
+            <section class="timer-section">
+                <div class="timer-display">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+                <div class="timer-mode" id="timer-mode">WORK</div>
+                <div class="timer-controls">
+                    <button id="start-btn" class="btn">Start</button>
+                    <button id="pause-btn" class="btn" disabled>Pause</button>
+                    <button id="reset-btn" class="btn">Reset</button>
+                    <button id="skip-btn" class="btn">Skip</button>
+                </div>
+            </section>
+
+            <!-- Character Stats Section -->
+            <section class="character-section">
+                <h2>Character Stats</h2>
+                <div class="character-container">
+                    <div class="character-avatar">
+                        <div class="avatar-container" id="avatar-container">
+                            <div class="avatar-image" id="avatar-image">👤</div>
+                            <div class="character-class" id="character-class">Novice</div>
+                        </div>
+                        <button id="customize-btn" class="btn customize-btn">Customize</button>
+                    </div>
+                    <div class="character-stats">
+                        <div class="stat">
+                            <span class="stat-label">Level:</span>
+                            <span id="level" class="stat-value">1</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">XP:</span>
+                            <span id="current-xp" class="stat-value">0</span>/<span id="xp-to-next-level" class="stat-value">100</span>
+                        </div>
+                        <div class="xp-bar-container">
+                            <div id="xp-bar" class="xp-bar"></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Pomodoros Completed:</span>
+                            <span id="pomodoro-count" class="stat-value">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Energy:</span>
+                            <span id="energy-value" class="stat-value">100</span>%
+                            <span id="energy-status" class="energy-status">Energized</span>
+                        </div>
+                        <div class="energy-bar-container">
+                            <div id="energy-bar" class="energy-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character Customization Modal -->
+            <div class="modal" id="customization-modal">
+                <div class="modal-content">
+                    <span class="close-modal" id="close-modal">&times;</span>
+                    <h2>Customize Your Character</h2>
+
+                    <div class="customization-tabs">
+                        <button class="tab-btn active" data-tab="classes">Classes</button>
+                        <button class="tab-btn" data-tab="themes">Themes</button>
+                        <button class="tab-btn" data-tab="sounds">Sounds</button>
+                        <button class="tab-btn" data-tab="backgrounds">Backgrounds</button>
+                    </div>
+
+                    <div class="customization-content">
+                        <!-- Classes Tab -->
+                        <div class="tab-content active" id="classes-tab">
+                            <h3>Character Class</h3>
+                            <div class="customization-items" id="class-items">
+                                <!-- Classes will be dynamically added here -->
+                            </div>
+                        </div>
+
+                        <!-- Themes Tab -->
+                        <div class="tab-content" id="themes-tab">
+                            <h3>Timer Themes</h3>
+                            <div class="customization-items" id="theme-items">
+                                <!-- Themes will be dynamically added here -->
+                            </div>
+                        </div>
+
+                        <!-- Sounds Tab -->
+                        <div class="tab-content" id="sounds-tab">
+                            <h3>Notification Sounds</h3>
+                            <div class="customization-items" id="sound-items">
+                                <!-- Sounds will be dynamically added here -->
+                            </div>
+                        </div>
+
+                        <!-- Backgrounds Tab -->
+                        <div class="tab-content" id="backgrounds-tab">
+                            <h3>Background Styles</h3>
+                            <div class="customization-items" id="background-items">
+                                <!-- Backgrounds will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quests & Challenges Section -->
+            <section class="quests-section">
+                <h2>Daily Quests & Challenges</h2>
+                <div class="quests-container">
+                    <div class="daily-quests">
+                        <h3>Daily Quests</h3>
+                        <div id="daily-quests-container">
+                            <!-- Daily quests will be dynamically added here -->
+                            <p class="no-quests" id="no-daily-quests">Loading daily quests...</p>
+                        </div>
+                    </div>
+                    <div class="weekly-challenges">
+                        <h3>Weekly Challenge</h3>
+                        <div id="weekly-challenge-container">
+                            <!-- Weekly challenge will be dynamically added here -->
+                            <p class="no-challenges" id="no-weekly-challenge">Loading weekly challenge...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements-section">
+                <h2>Achievements</h2>
+                <div class="achievements-container" id="achievements-container">
+                    <!-- Achievements will be dynamically added here -->
+                    <p class="no-achievements" id="no-achievements">Complete Pomodoros to unlock achievements!</p>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="settings-section">
+                <h2>Settings</h2>
+                <div class="settings-controls">
+                    <div class="setting">
+                        <label for="work-duration">Work Duration (minutes):</label>
+                        <input type="number" id="work-duration" min="1" max="60" value="25">
+                    </div>
+                    <div class="setting">
+                        <label for="short-break-duration">Short Break Duration (minutes):</label>
+                        <input type="number" id="short-break-duration" min="1" max="30" value="5">
+                    </div>
+                    <div class="setting">
+                        <label for="long-break-duration">Long Break Duration (minutes):</label>
+                        <input type="number" id="long-break-duration" min="1" max="60" value="15">
+                    </div>
+                    <div class="setting">
+                        <label for="long-break-interval">Long Break After (pomodoros):</label>
+                        <input type="number" id="long-break-interval" min="1" max="10" value="4">
+                    </div>
+                    <button id="save-settings-btn" class="btn">Save Settings</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Pomodoro RPG - Focus and Level Up!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
