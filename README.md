@@ -71,9 +71,7 @@ Un temporizador Pomodoro con elementos de gamificación RPG para hacer más dive
 
 Puedes acceder a la aplicación directamente a través de GitHub Pages:
 
-[Abrir RPG Pomodoro Timer](https://tu-usuario.github.io/nombre-del-repositorio)
-
-> Nota: Reemplaza "tu-usuario" y "nombre-del-repositorio" con tu nombre de usuario de GitHub y el nombre de tu repositorio.
+[Abrir RPG Pomodoro Timer](https://feliprado31.github.io/rpg-pomodoro/)
 
 ### Instalación Local
 
