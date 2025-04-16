@@ -10,17 +10,14 @@ Un temporizador Pomodoro con elementos de gamificación RPG para hacer más dive
 ### Estadísticas del Personaje
 ![Estadísticas del Personaje](screenshots/character-stats.png)
 
-### Sistema de Logros
-![Logros](screenshots/achievements.png)
-
 ### Misiones Diarias y Desafíos
 ![Misiones y Desafíos](screenshots/quests.png)
 
+### Sistema de Logros
+![Logros](screenshots/achievements.png)
+
 ### Personalización del Personaje
 ![Personalización](screenshots/customization.png)
-
-### Sistema de Energía
-![Sistema de Energía](screenshots/energy-system.png)
 
 ## Características
 
