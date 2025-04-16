@@ -2,6 +2,26 @@
 
 Un temporizador Pomodoro con elementos de gamificación RPG para hacer más divertida la productividad.
 
+## Capturas de Pantalla
+
+### Vista Principal del Temporizador
+![Vista del Temporizador](screenshots/timer-view.png)
+
+### Estadísticas del Personaje
+![Estadísticas del Personaje](screenshots/character-stats.png)
+
+### Sistema de Logros
+![Logros](screenshots/achievements.png)
+
+### Misiones Diarias y Desafíos
+![Misiones y Desafíos](screenshots/quests.png)
+
+### Personalización del Personaje
+![Personalización](screenshots/customization.png)
+
+### Sistema de Energía
+![Sistema de Energía](screenshots/energy-system.png)
+
 ## Características
 
 - **Temporizador Pomodoro Estándar**
@@ -48,9 +68,19 @@ Un temporizador Pomodoro con elementos de gamificación RPG para hacer más dive
 - JavaScript (Vanilla)
 - LocalStorage para persistencia de datos
 
-## Instalación
+## Acceso a la Aplicación
 
-No se requiere instalación. Simplemente abre el archivo `index.html` en tu navegador web.
+### Versión en Línea
+
+Puedes acceder a la aplicación directamente a través de GitHub Pages:
+
+[Abrir RPG Pomodoro Timer](https://tu-usuario.github.io/nombre-del-repositorio)
+
+> Nota: Reemplaza "tu-usuario" y "nombre-del-repositorio" con tu nombre de usuario de GitHub y el nombre de tu repositorio.
+
+### Instalación Local
+
+No se requiere instalación. Simplemente descarga el código y abre el archivo `index.html` en tu navegador web.
 
 ## Desarrollo Local
 
